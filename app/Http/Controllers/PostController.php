@@ -4,15 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Events\PostPublished;
 use App\Models\Post;
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+
 
 class PostController extends Controller
 {
     public function store(Request $request)
     {
-        // return $request->all();
+        dd($request->all());
 
         $request->validate([
             'title' => 'required|string|max:255',

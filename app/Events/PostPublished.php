@@ -20,10 +20,9 @@ class PostPublished
      * Create a new event instance.
      */
     public $post;
-    // public $content
+
     public function __construct(Post $post)
     {
-        // dd($post);
         $this->post = $post;
     }
 
