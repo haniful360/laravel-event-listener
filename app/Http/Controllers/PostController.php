@@ -16,9 +16,11 @@ class PostController extends Controller
         ]);
 
         // send to mail plain text
-        Mail::raw("A blog post '{$post->title}' have been published", function($message){
+        Mail::raw("A blog post '{$post->title}' have been published", function ($message) {
             $message->to('recipient@example.com')
-                    ->subject('New Blog Post Published');
+                ->subject('New Blog Post Published');
         });
+
+        return back();
     }
 }
